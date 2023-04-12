@@ -1,0 +1,10 @@
+17:18:48 **** Incremental Build of configuration Debug for project IBRAHIM_TUNCAY_MidTerm_EE242 ****
+make -j12 all 
+arm-none-eabi-size   IBRAHIM_TUNCAY_MidTerm_EE242.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7724	     12	   2340	  10076	   275c	IBRAHIM_TUNCAY_MidTerm_EE242.elf
+Finished building: default.size.stdout
+ 
+
+17:18:48 Build Finished. 0 errors, 0 warnings. (took 356ms)
+
