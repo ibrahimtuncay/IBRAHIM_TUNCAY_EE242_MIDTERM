@@ -1,0 +1,8 @@
+Asciiname=732(ibrahim)
+ASciisurname=660(tuncay)
+ASciitotal=1392
+
+Timernumber=(1392%14)+1=7
+ARRNUMBER=65535
+Duration=(660%1500)*30=19.800
+LEDPINNUMBER=(1392%4)+12=12
