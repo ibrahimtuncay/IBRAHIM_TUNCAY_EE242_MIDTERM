@@ -1,0 +1,34 @@
+#include "stm32f407xx.h"
+
+int main(){
+	TIM7->CR1=0;//it comes from your instruction I don't understand why we need to write this
+		RCC->APB1ENR=0x20;//clocked the gate
+		TIM7->CR1=0x1;//counter enabled
+		TIM7->CNT = 0;//initial the counter value as 0
+		RCC->AHB1ENR|=RCC_AHB1ENR_GPIODEN;//clocked the port D
+		GPIOD->MODER=0x1000000; //set D12 as output
+
+		//period =0.15 sn
+		//6.55Hz= 168Mhz/(1681/65536)
+
+		TIM7->PSC=1680;
+		TIM7->ARR = 65535;
+
+
+
+
+
+	 int counter=0;
+
+	while(1){
+
+		if(TIM7->CNT == 0x4D58 ){
+			GPIOD->ODR^=GPIO_ODR_OD12;//toggle the led status
+			counter++;
+			TIM7->CNT =0x1;}//if
+	    TIM7->CNT =0;
+
+
+
+		}//while
+}//main
